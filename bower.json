@@ -1,0 +1,12 @@
+{
+  "name": "TemplateApp",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#master",
+    "sass-mediaqueries": "~1.4.0",
+    "platform": "~1.3.0"
+  },
+  "dependencies": {
+    "ngCordova": "~0.1.12-alpha"
+  }
+}
