@@ -1,7 +1,3 @@
-/**
- * Created by brian on 2/12/15.
- */
-
 /// <reference path="./typings/tsd.d.ts" />
 /// place new references here
 /// <reference path="./app-controller.ts" />

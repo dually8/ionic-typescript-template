@@ -1,6 +1,3 @@
-/**
- * Created by cjcoffey on 3/12/2015.
- */
 /// <reference path="./_app.ts" />
 
 module app {
