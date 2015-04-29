@@ -40,11 +40,14 @@ module app {
     var config = new AppConfig();
 
     'use strict';
-    angular.module('starter', ['ngCordova','ionic'])
+    angular.module('starter', ['ionic','ngCordova'])
         .value('config', config)
-        .controller("AppCtrl", AppCtrl)
-        .controller("PlaylistsCtrl", PlaylistsCtrl)
-        .controller("PlaylistCtrl", PlaylistCtrl)
+        .service("dbService", app.services.DatabaseService)
+        .service("appService", app.services.AppService)
+        .controller("AppCtrl", app.controllers.AppCtrl)
+        .controller("ListController", app.controllers.ListController)
+        .controller("PlaylistsCtrl", app.controllers.PlaylistsCtrl)
+        .controller("PlaylistCtrl", app.controllers.PlaylistCtrl)
         .run(function($ionicPlatform) {
             $ionicPlatform.ready(function() {
                 // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -67,6 +70,16 @@ module app {
                     abstract: true,
                     templateUrl: "app/menu.html",
                     controller: 'AppCtrl'
+                })
+
+                .state('app.list', {
+                    url: "/list",
+                    views: {
+                        'menuContent': {
+                            templateUrl: "app/list/list.html",
+                            controller: 'ListController'
+                        }
+                    }
                 })
 
                 .state('app.search', {

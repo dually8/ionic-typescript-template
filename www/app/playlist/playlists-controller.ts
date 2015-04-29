@@ -1,6 +1,6 @@
 /// <reference path="../_app.ts" />
 
-module app {
+module app.controllers {
     export interface IPlaylistsScope extends ng.IScope {
         playlists: any;
     }

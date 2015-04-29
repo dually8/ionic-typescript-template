@@ -31,3 +31,9 @@ An application using Apache Cordova, Ionic Framework, and Typescript. Currently 
 3. ```$ gulp ionic-plugin-install```
 4. ```$ gulp tsc```
 5. ```$ ionic serve --lab```
+
+####Architecture
+The architecture of this template is a modified MVC framework. All application code is contained in the /www/app folder.
+Models are placed in a models folder (e.g. /www/app/models/). Views and Controllers are placed in their own folder
+together (e.g. /www/app/playlist/).  Services are placed in the common folder (e.g. /www/app/common/).  Main app views,
+models, and controller are just placed in the /www/app/ folder (e.g. /www/app/app-controller.ts).

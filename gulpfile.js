@@ -60,5 +60,42 @@ gulp.task('ionic-plugin-install', function() {
 });
 
 gulp.task('tsc', function () {
-  sh.exec("tsc -t es5 --sourceMap --out ./www/js/app.js ./www/app/_app.ts");
+    sh.exec("tsc --target es5 --sourceMap --out ./www/js/app.js ./www/app/_app.ts");
 });
+
+gulp.task('ionic serve', ['sass', 'tsc'], function () {
+    sh.exec("ionic serve");
+});
+
+gulp.task('ionic serve lab', ['sass', 'tsc'], function () {
+    sh.exec("ionic serve --lab");
+});
+
+gulp.task('run android', ['sass', 'tsc'], function () {
+    sh.exec("ionic run android");
+});
+
+gulp.task('run ios', ['sass', 'tsc'], function () {
+    sh.exec("ionic run ios");
+});
+
+gulp.task('emulate-iPad2', ['sass', 'tsc'],function(){
+    sh.exec("ionic emulate ios --target='iPad-2'");
+});
+
+gulp.task('emulate-iPhone6', ['sass', 'tsc'],function(){
+    sh.exec("ionic emulate ios --target='iPhone-6'");
+});
+
+gulp.task('emulate-iPhone5s', ['sass', 'tsc'],function(){
+    sh.exec("ionic emulate ios --target='iPhone-5s'");
+});
+
+gulp.task('emulate-iPhone6Plus', ['sass', 'tsc'],function(){
+    sh.exec("ionic emulate ios --target='iPhone-6-Plus'");
+});
+
+gulp.task('emulate-iPhone4s', ['sass', 'tsc'],function(){
+    sh.exec("ionic emulate ios --target='iPhone-4s'");
+});
+
