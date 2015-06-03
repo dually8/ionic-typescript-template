@@ -2,7 +2,6 @@
   "name": "TemplateApp",
   "app_id": "",
   "gulpStartupTasks": [
-    "ionic-plugin-install",
     "tsc",
     "sass",
     "watch"
