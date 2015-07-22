@@ -20,6 +20,13 @@ interface Window {
         displayname: string,
         size: number,
         creationCallback?: (database: Database) => void): Database;
+
+    /**
+     * Allows for device SQLite (http://stackoverflow.com/questions/28254770/acessing-apache-cordova-plugins-using-typescript)
+     * http://stackoverflow.com/questions/17707728/using-typescript-with-phonegap-cordova-plugins
+     * @type {any} Undefined as of now.
+     */
+    sqlitePlugin: any;
 }
 
 interface Database {

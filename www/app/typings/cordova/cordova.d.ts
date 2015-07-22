@@ -6,6 +6,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc.
 // Licensed under the MIT license.
 
+/// <reference path="plugins/AppVersion.d.ts"/>
 /// <reference path="plugins/BatteryStatus.d.ts"/>
 /// <reference path="plugins/Camera.d.ts"/>
 /// <reference path="plugins/Contacts.d.ts"/>
@@ -43,7 +44,6 @@ interface Cordova {
     define(moduleName: string, factory: (require: any, exports: any, module: any) => any): void;
     /** Access a Cordova module by name. */
     require(moduleName: string): any;
-    getAppVersion();
 }
 
 interface Document {
@@ -91,4 +91,3 @@ interface UrlUtil {
 
 /** Apache Cordova instance */
 declare var cordova: Cordova;
-declare var navigator: Navigator;
