@@ -44,3 +44,13 @@ An application using Apache Cordova, Ionic Framework, and Typescript. Currently 
         - ````$ tsd init````(this creates the typings folder and the tsd.json file
     - Installing the packages
         - ````$ tsd install angular cordova-ionic cordova --save --resolve````
+
+## Updating npm packages
+1.	sudo npm install –g npm-check-updates
+    - installs npm-check-updates package
+2.	sudo rm –rf node_modules/
+    - removes the node_modules folder so we can update it.
+3.	npm-check-updates –u
+    - updates your package.json with the latest npm packages
+4.	sudo npm install
+    - installs latest node packages from your package.json to the newly created node_modules folder.
