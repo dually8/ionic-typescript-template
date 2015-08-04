@@ -1,6 +1,6 @@
 {
   "version": "v4",
-  "repo": "borisyankov/DefinitelyTyped",
+  "repo": "dually8/DefinitelyTyped",
   "ref": "master",
   "path": "typings",
   "bundle": "typings/tsd.d.ts",
@@ -19,6 +19,9 @@
     },
     "cordova-ionic/cordova-ionic.d.ts": {
       "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"
+    },
+    "cordova/plugins/AppVersion.d.ts": {
+      "commit": "859390c05b6dd2d96b2b1341ffb6c776e65f7c3c"
     },
     "cordova/plugins/Camera.d.ts": {
       "commit": "cf7c97b2a68a385c98c75fb6edd81083c97c983c"

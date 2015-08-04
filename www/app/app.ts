@@ -42,10 +42,9 @@ module app {
     'use strict';
     angular.module('starter', ['ionic','ngCordova'])
         .value('config', config)
-        .service("dbService", app.services.DatabaseService)
+        .constant('_', _)
         .service("appService", app.services.AppService)
         .controller("AppCtrl", app.controllers.AppCtrl)
-        .controller("ListController", app.controllers.ListController)
         .controller("PlaylistsCtrl", app.controllers.PlaylistsCtrl)
         .controller("PlaylistCtrl", app.controllers.PlaylistCtrl)
         .run(function($ionicPlatform) {
@@ -70,16 +69,6 @@ module app {
                     abstract: true,
                     templateUrl: "app/menu.html",
                     controller: 'AppCtrl'
-                })
-
-                .state('app.list', {
-                    url: "/list",
-                    views: {
-                        'menuContent': {
-                            templateUrl: "app/list/list.html",
-                            controller: 'ListController'
-                        }
-                    }
                 })
 
                 .state('app.search', {

@@ -7,27 +7,13 @@ module app.services {
     'use strict';
 
     export interface IAppService {
-        init(): ng.IPromise<any>;
     }
 
     export class AppService implements IAppService {
 
         constructor(private $ionicPlatform,
-                    private $q: ng.IQService,
-                    private dbService: app.services.DatabaseService) {
+                    private $q: ng.IQService) {
 
-        }
-
-        public init(): ng.IPromise<any>{
-            var _this = this;
-            var deferred = this.$q.defer();
-
-            this.$ionicPlatform.ready(function(){
-                _this.dbService.init();
-                deferred.resolve();
-            });
-
-            return deferred.promise;
         }
     }
 }
