@@ -171,5 +171,4 @@ declare var Camera: {
         ARROW_RIGHT: number;
         ARROW_ANY: number;
     }
-    CameraPopoverOptions: CameraPopoverOptions
 };

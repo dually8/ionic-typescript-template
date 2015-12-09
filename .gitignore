@@ -20,3 +20,5 @@ platforms/
 *.suo
 www/merges/*
 www/bld/*
+
+/www/lib
